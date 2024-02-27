@@ -17,19 +17,19 @@ function Tabla({ categorias, platos, restaurantes }) {
           {/* body */}
           {platos.map((plato, index) => {
             const categoria = categorias.find(
-              (categoria) => categoria.id === plato.category_id
+              (categoria) => categoria.categoriaID === plato.categoriaID
             );
             const restaurante = restaurantes.find(
-              (restaurante) => restaurante.id === plato.restaurant_id
+              (restaurante) => restaurante.restauranteID === plato.restauranteID
             );
             return (
-              <tr key={plato.id}>
+              <tr key={plato.ID}>
                 <td>{index + 1}</td>
-                <td>{plato.name}</td>
-                <td>{plato.description}</td>
-                <td>{plato.price}</td>
-                <td>{categoria.name}</td>
-                <td>{restaurante.name}</td>
+                <td>{plato.plato}</td>
+                <td>{plato.descripcion}</td>
+                <td>{plato.precio.toFixed(2)}€</td>
+                <td>{categoria.categoria}</td>
+                <td>{restaurante.restaurante}</td>
               </tr>
             );
           })}
