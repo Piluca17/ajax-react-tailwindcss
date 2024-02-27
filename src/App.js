@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Tabla from "./Tabla";
+import Tabla from "./Tabla/Tabla";
 import API from "./api";
 
 //La función App va a ralendizar las variables.
